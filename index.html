@@ -1,74 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wild Life Photography - Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <center>
-      <h1>Life in the Wild</h1>
-    </center>
-    <div class="container">
-      <div>
-        <img
-          src="https://static.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg"
-        />
-      </div>
-      <div>
-        <img
-          src="https://static.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg"
-        />
-      </div>
-      <div class="big">
-        <img
-          src="https://static.pexels.com/photos/213399/pexels-photo-213399.jpeg"
-        />
-      </div>
-      <div class="big">
-        <img
-          src="https://static.pexels.com/photos/158471/ibis-bird-red-animals-158471.jpeg"
-        />
-      </div>
-      <div>
-        <img
-          src="https://static.pexels.com/photos/133459/pexels-photo-133459.jpeg"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/1822603/pexels-photo-1822603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        />
-      </div>
-      <div>
-        <img
-          src="https://static.pexels.com/photos/50988/ape-berber-monkeys-mammal-affchen-50988.jpeg"
-        />
-      </div>
-      <div class="vertical">
-        <img
-          src="https://images.pexels.com/photos/2578370/pexels-photo-2578370.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        />
-      </div>
-      <div class="horizontal">
-        <img
-          src="https://images.pexels.com/photos/2955703/pexels-photo-2955703.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/1466592/pexels-photo-1466592.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/2904176/pexels-photo-2904176.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        />
-      </div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/2265247/pexels-photo-2265247.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-        />
-      </div>
-    </div>
-  </body>
+
+<head>
+	<title>Wild Life Photography - Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
+	<h1>Life in the Wild</h1>
+
+	<div class="container">
+		<img src="https://static.pexels.com/photos/52500/horse-herd-fog-nature-52500.jpeg" class="animal">
+		<img src="https://static.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg" class="animal">
+		<img src="https://static.pexels.com/photos/213399/pexels-photo-213399.jpeg" class="animal">
+		<img src="https://static.pexels.com/photos/158471/ibis-bird-red-animals-158471.jpeg" class="animal">
+		<img src="https://static.pexels.com/photos/133459/pexels-photo-133459.jpeg" class="animal">
+		<img src="https://static.pexels.com/photos/50988/ape-berber-monkeys-mammal-affchen-50988.jpeg" class="animal">
+	</div>
+</body>
+<script>
+	const animalArray = document.querySelectorAll(".animal");
+	const soundSrc= ["horse","elephant","fish","ibis","lemur","monkey"];
+	animalArray.forEach((animal,idx)=>{
+		animal.addEventListener("mouseover",()=>{
+                const audio = new Audio("./media/"+soundSrc[idx]+".mp3");
+				audio.play();
+				setTimeout(()=>{
+                    audio.pause();
+                    audio.currentTime = 0;
+				},3000);
+		})
+	})
+</script>
 </html>
