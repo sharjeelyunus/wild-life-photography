@@ -26,6 +26,7 @@ body {
   grid-row: span 2;
 }
 
+
 /*stretch horizontally*/
 .horizontal {
   grid-column: span 2;
