@@ -5,9 +5,38 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <center>
+    <header id="header">
+      <a href="#" class="logo">Wild Life Photography</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text"><span>Discover the Wilderness</span><br>adventure</h2>
+      <img src="./img/bird1.png" id="bird1">
+      <img src="./img/bird2.png" id="bird2">
+      <!-- <img src="./img/forest1.png" id="forest">   -->
+      <!-- <img src="./img/photographer2-removebg-preview.png" id="forest"> -->
+      <!-- <img src="./img/photographer2-removebg-preview.png" id="photo"> -->
+      <img src="./img/elephant-flip.png" id="forest1"> 
+      <a href="#" id="btn">Explore</a>
+      <img src="./img/photographer2-removebg-preview.png" id="forest">
+      <!-- <img src="./img/elephant-removebg-preview (1).png" id="forest1"> -->
+       <img src="./img/rocks1.png" id="rocks">  
+      <!-- <img src="./img/rock-removebg-preview.png" id="rocks">  -->
+       <img src="./img/water1.png" id="water">
+      <!-- <img src="./img/rock-removebg-preview.png" id="water"> -->
+    </section>
+    <!-- <center>
       <h1>Life in the Wild</h1>
-    </center>
+    </center> -->
+
+
+  <div class="sec">
+    <h2>PHOTOGRAPHY</h2>
     <div class="container">
       <div>
         <img
@@ -69,6 +98,35 @@
           src="https://images.pexels.com/photos/2265247/pexels-photo-2265247.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         />
       </div>
-    </div>
+    </div> 
+  </div>
+<script>
+  let text = document.getElementById('text');
+  let bird1 = document.getElementById('bird1');
+  let bird2 = document.getElementById('bird2');
+  let btn = document.getElementById('btn');
+  let rocks = document.getElementById('rocks');
+  let forest = document.getElementById('forest');
+  let water = document.getElementById('water');
+  let header = document.getElementById('header');
+  let forest1 = document.getElementById('forest1');
+
+  window.addEventListener('scroll',function(){
+let value = window.scrollY;
+
+text.style.top = 40 + value * -0.5 + '%';
+bird1.style.top = value * -1.5 + 'px';
+bird1.style.left = value * 2 + 'px';
+bird2.style.top = value * -1.5 + 'px';
+bird2.style.left = value * -5 + 'px';
+btn.style.marginTop = value * 1.5 + 'px';
+rocks.style.top = value * -0.12 + 'px';
+forest.style.top = 10 + value * 0.05 + '%';
+header.style.top = value * 0.5 + 'px';
+forest1.style.left = value * 0.5 + 'px';
+
+  })
+</script>
+
   </body>
 </html>
