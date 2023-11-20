@@ -137,7 +137,7 @@ font-family: 'Poppins', sans-serif;
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 25px;
   max-width: 1100px;
   grid-auto-rows: 250px;
   grid-auto-flow: dense;
@@ -164,7 +164,7 @@ h1 {
   font-size: 3em;
   border-bottom: 2px solid pink;
   border-right: 2px solid pink;
-  width: 400px;
+  width: 350px;
   text-align: center;
   box-shadow: 4px 4px 5px #888888;
   margin-top: 10px;
@@ -195,9 +195,9 @@ img {
   transform: scale(1.2);
 }
 
-/* img:hover {
+img:hover {
   transform: scale(1.1);
-} */
+}
 
 @media screen and (max-width: 560px) {
   .vertical {
